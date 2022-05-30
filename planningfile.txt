@@ -1,0 +1,82 @@
+
+Branch 0:
+
+Branch 1:
+main.py
+
+Branch 2:
+
+Branch 2a. manipulateStrings.py
+Category 1
+a. Converting a given string to upper case or lower case. 
+b. Identify whether numeric values are in a given string.
+c. Identify whether a given string is a valid number or not.
+d. Remove any numeric values in a given string and then convert the string to upper
+case or lower Case.
+
+Branch 2b. convertNumbers.py
+Category 2
+a. Converting a number which represents a length given in meters to feet and vice
+versa and centimeter to inches and vice versa.
+b. Converting a number which represents a mass given in kilograms to pounds and
+vice versa, and mass given in milligram to ounce and vice versa.
+c. Converting a number which represents a time given in hours to minutes and vice
+versa, and time given in minutes to seconds and vice versa.
+
+
+# OPTIONS PLAN
+
+'''
+OPTIONS A:
+(A) Parameter
+(B) Keyboard 
+(C) File
+
+|
+v
+
+OPTIONS B:
+(A) Category A
+(B) Category B
+
+|
+v
+
+OPTIONS C,A:
+(A)
+(B)
+(C)
+(D)
+
+OR
+
+OPTIONS C,B:
+(A)
+(B)
+(C)
+
+|
+v
+
+
+INPUT (B EXCLUSIVE)
+
+|
+v
+
+OUTPUT
+
+|
+v
+
+VISUAL OUTPUT (AA,AB)
+
+|
+v
+
+FILE OUTPUT (AC)
+
+
+'''
+
+
