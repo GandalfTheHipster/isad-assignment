@@ -26,6 +26,7 @@ import random
 # Already done by .lower() and .upper()
 
 
+
 # (B) Identify whether numeric values are in a given string.
 
 def indentifyNumerals(inputString):

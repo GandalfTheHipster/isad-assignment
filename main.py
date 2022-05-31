@@ -18,13 +18,35 @@ def main():
 
     validnumber = 'null'
     haha = "null"
+    test_mode = 'no'
 
     # Menu
     
     print("\nWelcome to ISAD Assignment.\n\nPlease hold for an operator.")
 
+    try:
+        x = input('Enable test mode?\n(A) Yes\n(B) No\n\n')
+    except ValueError:
+        print('Yeah, nah bro.')
+    while x !='A' and x !='B': #A = Category 3, B = Category 2
+        print('Invalid Selection')
+        try:
+            x = input('')
+        except ValueError:
+            print('Yeah, nah bro.')
+
+    test_mode = x
+    x = ''
+
+    if test_mode == 'A':
+        test_mode_written = 'Active'
+        print("\nTest mode is:", test_mode_written)
+    elif test_mode == 'B':
+        test_mode_written = 'Inactive'
+        print("\nTest mode is:", test_mode_written)
+
     # INPUT TYPE
-    print("\n(A) Parameter - Input is a set parameter outlined in info.txt\n(B) Keyboard Input - Random user input\n(C) File - Input is from inputFile.txt\n")
+    print("\n(A) Parameter - Input is a set parameter outlined in inputs.py\n(B) Keyboard Input - Random user input\n(C) File - Input is from inputs.py\n")
 
     try:
         x = input('')
@@ -98,18 +120,41 @@ def main():
                 print('Yeah, nah bro.')
             while x !='A' and x !='B': #A = Upper Case, B = Lower Case
                 print('Invalid Selection')
-                try:
-                    x = input('')
-                except ValueError:
-                    print('Yeah, nah bro.')
+            
+            if input_type == 'B':
+                y = input('Enter a string.\n')
+                validnumber = y
+            elif input_type == 'A' or 'C':
+                y = convertstring
+                validnumber = y
+            
             if x == 'A':
-                #Make String Uppercase!
-                #PRINT STRING
-                print("\nOutput:", convertstring.upper())
+                print("\nOutput:", validnumber.upper())
+                if test_mode == 'A':
+                    if input_type == 'A' or 'C':
+                        if validnumber.upper() == convertstring.upper():
+                            print("Whitebox Result verified")
+                        else:
+                            print("Whitebox Result Failed")
+                    elif input_type == 'B':
+                        if validnumber.upper() == validnumber.upper():
+                            print("Whitebox Result verified")
+                        else:
+                            print("Whitebox Result Failed")
             elif x == 'B':
-                #Make String Lowercase!
-                #PRINT STRING
-                print("\nOutput:", convertstring.lower())
+                print("\nOutput:", validnumber.lower())
+                if test_mode == 'A':
+                    if input_type == 'A' or 'C':
+                        if validnumber.lower() == convertstring.lower():
+                            print("Whitebox Result verified")
+                        else:
+                            print("Whitebox Result Failed")
+                    elif input_type == 'B':
+                        if validnumber.lower() == validnumber.lower():
+                            print("Whitebox Result verified")
+                        else:
+                            print("Whitebox Result Failed")
+
         elif function_chose == 'B':
             function_chose_written = 'Identify whether numeric values are in a given string'
             print('\nYou have chosen function:', function_chose_written)
